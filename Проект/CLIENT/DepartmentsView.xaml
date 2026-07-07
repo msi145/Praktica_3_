@@ -1,0 +1,18 @@
+<UserControl x:Class="WmsClient.Views.DepartmentsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+            <TextBlock Text="Цеха и подразделения" FontSize="20" FontWeight="Bold" VerticalAlignment="Center"/>
+            <Button Content="Обновить из БД" Width="150" Height="32" Margin="20,0,0,0" Click="BtnRefresh_Click"/>
+        </StackPanel>
+
+        <DataGrid x:Name="Grid" Grid.Row="1" AutoGenerateColumns="True" IsReadOnly="True"
+                  GridLinesVisibility="Horizontal" AlternatingRowBackground="#F7F9FB"/>
+    </Grid>
+</UserControl>
